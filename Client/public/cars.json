@@ -1,0 +1,112 @@
+[
+    {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_IkpgxrMCZ80YU-5hkDc29TaW7tTk0SmyoLjz5HAWw&s",
+        "name": "Toyota Corolla",
+        "description": "A compact car with great fuel efficiency and comfortable seating for five passengers.",
+        "price": "18999",
+        "year": "2023",
+        "type": "New",
+        "location": "Bai mail 23",
+        "quantity": "10",
+        "supplierName": "AutoNation"
+    },
+    {
+        "img": "https://cdn.motor1.com/images/mgl/bgENQj/s1/2025-toyota-camry.jpg",
+        "name": "Toyota Camry",
+        "description": "A mid-size sedan known for its reliability, spacious interior, and smooth ride.",
+        "price": "24999",
+        "year": "8",
+        "type": "8",
+        "location": "8",
+        "quantity": "8",
+        "supplierName": "CarMax"
+    },
+    {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHuNgwoQmmj15lmKCnv0WBFKWbaiC0l3OrKRjzZaNog&s",
+        "name": "Toyota RAV4",
+        "description": "A popular compact SUV with excellent cargo space and advanced safety features.",
+        "price": "28999",
+        "year": "2024",
+        "type": "New",
+        "location": "Dhaka BS Point",
+        "quantity": "12",
+        "supplierName": "Toyota of America"
+    },
+    {
+        "img": "https://www.cnet.com/a/img/resize/d29ab45670195bd9f720b86810dcf369aaedef55/hub/2023/02/10/abcd4082-dd6d-4013-a186-50f24f8dfc73/2024-toyota-grandhighlander-stormcloud-001-scaled.jpg?auto=webp&fit=crop&height=675&width=1200",
+        "name": "Toyota Highlander",
+        "description": "A versatile mid-size SUV offering a smooth ride, spacious cabin, and strong resale value.",
+        "price": "33999",
+        "year": "2019",
+        "type": "Used",
+        "location": "Manchester Len 4",
+        "quantity": "6",
+        "supplierName": "Lithia Motors"
+    },
+    {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRppWNiT8sw2lpBSrqTKDfHoirn71eyHfLnSQ&s",
+        "name": "Toyota Tacoma",
+        "description": "A rugged yet comfortable pickup truck with impressive off-road capabilities.",
+        "price": "31999",
+        "year": "2021",
+        "type": "Used",
+        "location": "London Cambridge B12 23",
+        "quantity": "23",
+        "supplierName": "Carvana"
+    },
+    {
+        "img": "https://global.toyota/pages/news/images/2022/11/16/1345/001.jpg",
+        "name": "Toyota Prius",
+        "description": "A hybrid hatchback known for its exceptional fuel economy and eco-friendly design.",
+        "price": "26999",
+        "year": "2022",
+        "type": "New",
+        "location": "Botesshor Point Bely Road",
+        "quantity": "11",
+        "supplierName": "AutoTrader"
+    },
+    {
+        "img": "https://example.com/car7.jpg",
+        "name": "Toyota Sienna",
+        "description": "A spacious and family-friendly minivan with comfortable seating and advanced safety features.",
+        "price": "36999",
+        "year": "2021",
+        "type": "New",
+        "location": "Appify Town Madina Market Jabed Complex",
+        "quantity": "7",
+        "supplierName": "Vroom"
+    },
+    {
+        "img": "https://example.com/car8.jpg",
+        "name": "Toyota 4Runner",
+        "description": "A rugged and reliable SUV built for off-road adventures and everyday driving.",
+        "price": "40999",
+        "year": "2018",
+        "type": "Used",
+        "location": "Akhalia 100 sadik complex",
+        "quantity": "5",
+        "supplierName": "Shifat"
+    },
+    {
+        "img": "https://example.com/car9.jpg",
+        "name": "Toyota Avalon",
+        "description": "A full-size sedan offering a smooth and quiet ride with upscale interior features.",
+        "price": "34999",
+        "year": "2017",
+        "type": "Used",
+        "location": "Boro Bazar Sylten Town",
+        "quantity": "8",
+        "supplierName": "TrueCar"
+    },
+    {
+        "img": "https://example.com/car10.jpg",
+        "name": "Toyota Supra",
+        "description": "A legendary sports car with exhilarating performance and striking design.",
+        "price": "59999",
+        "year": "2024",
+        "type": "New",
+        "location": "Moddopatti chattor dawki",
+        "quantity": "3",
+        "supplierName": "Cars.com"
+    }
+]

@@ -1,0 +1,27 @@
+.nav-item {
+    position: relative;
+    
+}
+.nav-item {
+    margin: 0 5px;
+}
+.nav--link:hover {
+    color: #ed1c24 !important;
+}
+.nav--link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ed1c24;
+    transition: all .5s;
+}
+.nav--link:hover::after {
+    width: 100%;
+    left: 0;
+}
+.nav--link{
+    color: #666 !important;
+}

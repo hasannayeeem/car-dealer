@@ -1,0 +1,66 @@
+.subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+    padding: 50px;
+    padding-bottom: 90px;
+}
+.header1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+.main-btn {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: #ff6464 !important;
+    color: #fff !important;
+    cursor: pointer;
+    border-radius: unset;
+    transition: all .3s;
+}
+.main-btn:hover {
+    background: #eb1c2b !important;
+}
+.input-email {
+    width: 350px;
+    max-width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 0.2px solid #ccc;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.cycle {
+    height: 35px;
+}
+.paragraph {
+    margin: 25px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 580px) {
+    .form{
+       flex-direction: column;
+    }
+    .subscribe{
+        padding: 40px 0px 40px 0px;
+    }
+    .header1{
+        font-size: 1.5rem;
+        margin-left: 30px;
+    }
+    .paragraph {
+        padding: 30px;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+}

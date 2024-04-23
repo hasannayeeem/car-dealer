@@ -1,0 +1,19 @@
+.product{
+    border: 0px solid lightgray;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0 25px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding: 10px;
+}
+.product img,button{
+    border-radius: 0 19px;
+    color: #eb1c2b !important;
+    font-weight: 500; 
+    background-color: white !important;
+    border: 1px solid #eb1c2b;
+}
+.product button:hover{
+    color: white !important;
+    background-color: #eb1c2b !important;
+}

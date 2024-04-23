@@ -1,0 +1,66 @@
+[
+    {
+      "serviceType": "Basic Service",
+      "description": "Recommended Every 3 Months / 5,000 Kms",
+      "warranty": "2 Months / 2,000 Kms Warranty",
+      "duration": "Time Taken 4 Hours",
+      "price": 2099
+    },
+    {
+      "serviceType": "General Service",
+      "description": "Recommended Every 6 Months / 10,000 Kms",
+      "warranty": "2 Months / 2,000 Kms Warranty",
+      "duration": "Time Taken 6 Hours",
+      "price": 2999
+    },
+    {
+      "serviceType": "Full Service",
+      "description": "Recommended Every 1 Year / 20,000 Kms",
+      "warranty": "2 Months / 2,000 Kms Warranty",
+      "duration": "Time Taken 8 Hours",
+      "price": 4199
+    },
+    {
+      "serviceType": "Oil Change",
+      "description": "Regular oil change service for your vehicle.",
+      "warranty": "3 months",
+      "duration": "30 minutes",
+      "price": 50
+    },
+    {
+      "serviceType": "Brake Inspection",
+      "description": "Thorough inspection of your vehicle's braking system.",
+      "warranty": "N/A",
+      "duration": "1 hour",
+      "price": 80
+    },
+    {
+      "serviceType": "Tire Rotation",
+      "description": "Rotating the tires of your vehicle to ensure even wear.",
+      "warranty": "6 months",
+      "duration": "45 minutes",
+      "price": 60
+    },
+    {
+      "serviceType": "Engine Tune-Up",
+      "description": "Comprehensive tune-up service to optimize engine performance.",
+      "warranty": "1 year",
+      "duration": "2 hours",
+      "price": 150
+    },
+    {
+      "serviceType": "Wheel Alignment",
+      "description": "Adjusting the angles of the wheels to the specifications of the vehicle manufacturer.",
+      "warranty": "N/A",
+      "duration": "1 hour",
+      "price": 100
+    },
+    {
+      "serviceType": "Battery Replacement",
+      "description": "Replacing the old battery with a new one.",
+      "warranty": "2 years",
+      "duration": "1 hour",
+      "price": 120
+    }
+  ]
+  

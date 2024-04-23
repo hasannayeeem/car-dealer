@@ -1,0 +1,26 @@
+.ctg-title {
+    background: #666;
+    padding: 20px 0 20px 15px;
+    border-radius: 3px 3px 0px 0;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.ctg-items {
+    list-style: none;
+    padding-top: 25px;
+}
+.ctg-subitems {
+    list-style: none;
+}
+.column {
+    height: 325px;
+    background: #eee;
+}
+.cetagories-title {
+    color: #eb1c2b;
+    margin-bottom: -17px;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #eb1c2b;
+}

@@ -1,0 +1,25 @@
+.service{
+    border: 0px solid lightgray;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.service img, .serBtn {
+    border-radius: 0 19px;
+    font-weight: 500; 
+    color: white !important;
+    border: 1px solid #eb1c2b;
+    background-color: #eb1c2b !important;
+}
+.service .serBtn:hover{
+    background-color: white !important;
+    color: #eb1c2b !important;
+    border: 1px solid #eb1c2b !important;
+}
+.service .card-header {
+    background-color: #555;
+    border-radius: 0 25px;
+    color: white;
+}

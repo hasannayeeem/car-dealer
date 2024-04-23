@@ -1,0 +1,26 @@
+
+.btn-main{
+    color: #ed1c24;
+    border: 1px solid #ed1c24;
+    border-radius: 5px;
+    
+}
+.btn-main:hover{
+    color: white !important;
+    font-weight: 600;
+    background-color: #ed1c24 !important;
+}
+.input-text {
+    color: #ed1c24;
+    border: 1px solid #ed1c24;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+/* 
+#010E22;
+#31353c;
+#1c1c1c; 
+
+*/
