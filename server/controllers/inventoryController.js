@@ -6,7 +6,7 @@ const Review = require("../models/serviceModel");
 const createInventories = asyncHandler(async (req, res) => {
   const { name, image, description, location, cuisine, rating } = req.body;
 
-  const buildRestaurant = await new Inventory({
+  const buildInventory = await new Inventory({
     name,
     image,
     description,
@@ -15,11 +15,11 @@ const createInventories = asyncHandler(async (req, res) => {
     rating,
   });
 
-  const createInventories = await buildRestaurant.save();
+  const createInventories = await buildInventory.save();
 
   return res.status(200).json({
     createInventories,
-    message: "successfully created a restaurant Demo",
+    message: "successfully created a Inventory Demo",
   });
 });
 
@@ -33,39 +33,39 @@ const getAllInventories = asyncHandler(async (req, res) => {
   }
 });
 
-const getRestauranstsByUserEmail = asyncHandler(async (req, res) => {
+const getInventoriesByUserEmail = asyncHandler(async (req, res) => {
   const email = req.query.email;
-  // console.log(email, restaurants);
-  const myRestaurants = await Inventory.find({});
-  const restaurants = myRestaurants.filter(
-    (restaurants) =>
-      restaurants.reviews.filter((review) => review.userId === email).length &&
-      restaurants
+  // console.log(email, inventories);
+  const myInventories = await Inventory.find({});
+  const inventories = myInventories.filter(
+    (inventories) =>
+      inventories.reviews.filter((review) => review.userId === email).length &&
+      inventories
   );
-  // const restaurants = await Review.find({userId: email});
-  // console.log(email, restaurants);
+  // const inventories = await Review.find({userId: email});
+  // console.log(email, inventories);
 
-  if (!restaurants) {
+  if (!inventories) {
     return;
   } else {
     return res.status(200).json({
-      restaurants,
+      inventories,
     });
   }
 });
 
 const getInventoriesType = asyncHandler(async (req, res) => {
-  const { restaurant } = req.body;
+  const { inventory } = req.body;
 
-  if (restaurant.toLowerCase() === "all") {
-    const allRestaurant = await Inventory.find();
+  if (inventory.toLowerCase() === "all") {
+    const inventories = await Inventory.find();
     return res.status(200).json({
-      allRestaurant,
+      inventories,
     });
   } else {
-    const allRestaurant = await Inventory.find({ restaurantType: restaurant });
+    const inventories = await Inventory.find({ inventoryType: inventory });
     return res.status(200).json({
-      allRestaurant,
+      inventories,
     });
   }
 });
@@ -80,7 +80,7 @@ const getSingleInventories = asyncHandler(async (req, res) => {
   }
 });
 
-const submitRestaurant = asyncHandler(async (req, res) => {
+const submitInventory = asyncHandler(async (req, res) => {
   const user = {
     userId: req.body.userId,
     userName: req.body.userName,
@@ -89,26 +89,51 @@ const submitRestaurant = asyncHandler(async (req, res) => {
     paid: req.body.paid,
   };
 
-  const findRestaurant = await Inventory.findById(req.params.restaurant_id);
-  findRestaurant.users.push(user);
-  const saveSubmit = await findRestaurant.save();
+  const findInventory = await Inventory.findById(req.params.inventory_id);
+  findInventory.users.push(user);
+  const saveSubmit = await findInventory.save();
 
   return res.status(200).json({
     saveSubmit: saveSubmit,
-    message: "Successfully Restaurant Submitted ",
+    message: "Successfully Inventory Submitted ",
   });
 });
 
+
+const updateInventory = async (req, res) => {
+	try {
+		const id = req.params.id
+		const data = req.body
+    console.log(data);
+		await Inventory.updateOne(
+			{ _id: id },
+			{
+				$set: data,
+			}
+		)
+		res.status(200).json({
+			success: true,
+			message: 'Inventory data has been updated successfully',
+		})
+	} catch (err) {
+		res.status(500).json({
+			success: false,
+			message: 'Can not update because of a server side error!',
+		})
+	}
+}
+
+
 const deleteInventories = asyncHandler(async (req, res) => {
-  const deleteRestaurant = await Inventory.findByIdAndDelete(req.params.id);
-  const allRestaurant = await Inventory.find({});
-  if (!deleteRestaurant) {
+  const deleteInventory = await Inventory.findByIdAndDelete(req.params.id);
+  const getAllInventories = await Inventory.find({});
+  if (!deleteInventory) {
     res.status(400);
     throw new Error("Something Went Wrong!");
   } else {
     return res.status(200).json({
-      deleteRestaurant,
-      allRestaurant,
+      deleteInventory,
+      getAllInventories,
       message: "deleted successfully",
     });
   }
@@ -117,9 +142,10 @@ const deleteInventories = asyncHandler(async (req, res) => {
 module.exports = {
   createInventories,
   getAllInventories,
-  getRestauranstsByUserEmail,
+  getInventoriesByUserEmail,
   getInventoriesType,
   getSingleInventories,
-  submitRestaurant,
+  submitInventory,
+  updateInventory,
   deleteInventories,
 };

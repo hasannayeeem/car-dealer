@@ -22,6 +22,7 @@ const {
     getInventoriesType,
     getSingleInventories,
     deleteInventories,
+	updateInventory,
   } = require("../controllers/inventoryController");
 
 //   serviceController
@@ -51,11 +52,12 @@ router.post("/create-inventory", createInventories);
 router.post("/filter-inventory-type", getInventoriesType);
 router.get("/get-all-inventory", getAllInventories);
 router.get("/get-single-inventory/:id", getSingleInventories);
+router.put("/update-inventory/:id", updateInventory);
 router.delete("/delete-inventory/:id", deleteInventories);
 
 // // service routes
-// router.post("/create-service", createService);
-// router.get("/get-all-service", getAllServices);
+router.post("/create-service", createService);
+router.get("/get-all-services", getAllServices);
 // router.get("/get-single-service/:id", getSingleService);
 // router.delete("/delete-service/:id", deleteService);
 

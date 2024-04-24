@@ -1,13 +1,12 @@
 import React from 'react';
 import './services.css'
 import Loading from '../Shared/Loading/Loading';
-import Inventory from '../Home/Inventory/Inventory';
-import useProducts from '../../Hooks/useProducts';
 import Service from './Service';
+import useServices from '../../Hooks/useServices';
 
 const Services = () => {
-    const [products] = useProducts([]);
-    if(!products.length){
+    const [services] = useServices([]);
+    if(!services.length){
         <Loading></Loading>
     }
     return (
@@ -15,9 +14,9 @@ const Services = () => {
             <h1 className='services-title mt-5 mb-4'>Our Services</h1>
             <div className='services-container '>
             {
-                products.map(product => <Service
-                    key={product._id}
-                    product={product}
+                services.map(service => <Service
+                    key={service._id}
+                    service={service}
                 ></Service>)
             }
             </div>

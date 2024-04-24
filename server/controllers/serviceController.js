@@ -1,35 +1,46 @@
 const mongoose = require("mongoose");
 const asyncHandler = require("express-async-handler");
-const Review = require("../models/serviceModel");
-const Restaurant = require("../models/inventoryModel");
+const Service = require("../models/serviceModel");
 
 const createService = asyncHandler(async (req, res) => {
-  const { review, rating, userId, restaurantId, name } = req.body;
-  const buildRestaurant = new Review({
+  const { review, rating, userId, serviceId, name } = req.body;
+  const buildService = new Service({
     review,
     name,
     rating,
     userId,
-    restaurantId,
+    serviceId,
   });
 
-  const createReview = await buildRestaurant.save();
+  const createReview = await buildService.save();
 
-  const restaurant = await Restaurant.findById(restaurantId);
-  restaurant.reviews.push(createReview);
-  const totalRating = restaurant.reviews.reduce(
+  const service = await service.findById(serviceId);
+  service.reviews.push(createReview);
+  const totalRating = service.reviews.reduce(
     (sum, review) => sum + review.rating,
     0
   );
-  restaurant.rating = totalRating / restaurant.reviews.length;
-  await restaurant.save();
+  service.rating = totalRating / service.reviews.length;
+  await service.save();
 
   return res.status(200).json({
     createReview,
-    message: "restaurant created successfully",
+    message: "service created successfully",
   });
+});
+
+
+const getAllServices = asyncHandler(async (req, res) => {
+  const services = await Service.find({});
+  if (!services) {
+  } else {
+    return res.status(200).json({
+      services,
+    });
+  }
 });
 
 module.exports = {
   createService,
+  getAllServices,
 };

@@ -48,6 +48,7 @@ const Inventories = () => {
       <Topbar
         setSearchTerm={setSearchTerm}
         setType={setType}
+        type={type}
         role={role === "admin"}
       />
       <h1 className="services-title mt-5 mb-4">

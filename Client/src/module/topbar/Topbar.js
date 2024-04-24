@@ -1,6 +1,6 @@
 import React from "react";
 const opts = [{name: "name", label: "model"},{name: "price", label: "price"},{name: "location", label: "location"},{name: "type", label: "Car Type"},{name: 'year', label: 'year'}];
-const Topbar = ({setSearchTerm, setType, role}) => {
+const Topbar = ({setSearchTerm, setType, type, role}) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -18,7 +18,7 @@ const Topbar = ({setSearchTerm, setType, role}) => {
           <div className="form-control">
             <input
               type="text"
-              placeholder="Search"
+              placeholder={`Search ${type ? `by ${type}`: ''}`}
               className="input input-bordered w-24 mt-2 md:w-auto"
               onChange={(e)=> handleSearch(e)}
             />
