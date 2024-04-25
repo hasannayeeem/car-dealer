@@ -117,11 +117,14 @@ const ProductDetails = () => {
             </Link>
           </>
         ) : (
-          <>
+          <div className="d-flex gap-4 ">
             <Link to={`/contact`} className="d-block">
               <button className="main-btn d-block">Contact</button>
             </Link>
-          </>
+            <Link to={`/payment`} className="d-block">
+              <button className="main-btn d-block">Book Now</button>
+            </Link>
+          </div>
         )}
       </Fade>
     </div>

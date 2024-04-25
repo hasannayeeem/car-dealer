@@ -18,6 +18,7 @@ import Services from "./Pages/Services/Services";
 import ServiceDetail from "./Pages/Services/ServiceDetail";
 import RequireAdmin from "./module/auth/RequireAdmin";
 import RequireAuth from "./module/auth/RequireAuth";
+import Payment from "./module/payment/Payment";
 
 function App() {
   return (
@@ -69,6 +70,14 @@ function App() {
             // <RequireAuth>
             <AddProduct></AddProduct>
             // </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/payment"
+          element={
+            <RequireAuth>
+            <Payment></Payment>
+          </RequireAuth>
           }
         ></Route>
         {/* <Route path='/blog' element={<Blog></Blog>}></Route> */}
