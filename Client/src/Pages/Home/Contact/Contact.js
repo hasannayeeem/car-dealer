@@ -1,7 +1,22 @@
 import React from "react";
 import Subscribe from "../Subscribe/Subscribe";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const handleForm = (data) => {
+    Swal.fire(
+      `Thank you for contacting us. We will get back to you soon.`,
+    );
+    reset();
+  };
   return (
     <div>
       <section class="bg-light py-3 py-md-5">
@@ -23,18 +38,27 @@ const Contact = () => {
           <div class="row justify-content-lg-center">
             <div class="col-12 col-lg-9">
               <div class="bg-white border rounded shadow-sm overflow-hidden">
-                <form action="#!">
+                <form onSubmit={handleSubmit(handleForm)}>
                   <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                     <div class="col-12">
                       <label for="fullname" class="form-label">
                         Full Name <span class="text-danger">*</span>
                       </label>
                       <input
+                        {...register("name", {
+                          required: {
+                            value: true,
+                            message: "Name is Required",
+                          },
+                          minLength: {
+                            value: 3,
+                            message: "Must be 3 character or longer",
+                          },
+                        })}
                         type="text"
                         class="form-control"
                         id="fullname"
-                        name="fullname"
-                        value=""
+                        // value="fdsafas"
                         required
                       />
                     </div>
@@ -56,13 +80,23 @@ const Contact = () => {
                           </svg>
                         </span>
                         <input
+                          {...register("email", {
+                            required: {
+                              value: true,
+                              message: "Email is Required",
+                            },
+                            pattern: {
+                              value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                              message: "Provide a valid email",
+                            },
+                          })}
                           type="email"
                           class="form-control"
                           id="email"
-                          name="email"
-                          value=""
                           required
                         />
+                        <label>
+                                        {errors.email?.type === 'pattern' && <p className='text-red-600 text-sm font-semibold'>{errors.email.message}</p>}</label>
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -83,11 +117,19 @@ const Contact = () => {
                           </svg>
                         </span>
                         <input
+                          {...register("phone", {
+                            required: {
+                              value: true,
+                              message: "Phone is Required",
+                            },
+                            pattern: {
+                              value: /[0-9]/,
+                              message: "Provide a valid email",
+                            },
+                          })}
                           type="tel"
                           class="form-control"
                           id="phone"
-                          name="phone"
-                          value=""
                         />
                       </div>
                     </div>
