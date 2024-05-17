@@ -5,7 +5,6 @@ const Review = require("../models/serviceModel");
 
 const createInventories = asyncHandler(async (req, res) => {
   const { name, image, description, location, cuisine, rating } = req.body;
-
   const buildInventory = await new Inventory({
     name,
     image,

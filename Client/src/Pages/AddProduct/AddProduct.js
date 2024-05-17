@@ -4,24 +4,21 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        // const url = `https://morning-harbor-53882.herokuapp.com/products`;
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         if (result.insertedId) {
-        //             alert('added successfully')
-        //         }
-        //         else{
-        //             alert('oops! some mistake')
-        //         }
-        //     })
-        // reset();
+        const url = `http://localhost:8000/api/v1/create-inventory`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result) {
+                    alert('added successfully')
+                }
+            })
+        reset();
     };
     // code of update quantity but not worked
     // const { register, handleSubmit } = useForm();
